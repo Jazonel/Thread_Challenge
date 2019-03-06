@@ -11,3 +11,16 @@ C:\Users\ybernal\source\repos\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadCh
 C:\Users\ybernal\source\repos\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.pdb
 C:\Users\ybernal\source\repos\ThreadChallenge\ThreadChallenge\bin\Debug\PersonRecord.dll
 C:\Users\ybernal\source\repos\ThreadChallenge\ThreadChallenge\bin\Debug\PersonRecord.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\ThreadChallenge.exe.config
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\ThreadChallenge.exe
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\ThreadChallenge.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\PersonRecord.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\PersonRecord.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LumenWorks.Framework.IO.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.csprojAssemblyReference.cache
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.csproj.CoreCompileInputs.cache
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.csproj.CopyComplete
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.exe
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.pdb

@@ -56,6 +56,9 @@ namespace PersonRecord
                     {
                         recordObject.yearlyIncome = income;
                     }
+                    else {
+                        continue;
+                    }
                     recordList.Add(recordObject);
                 }
 
