@@ -1,0 +1,9 @@
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\bin\Debug\LogSpace.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\bin\Debug\LogSpace.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\bin\Debug\log4net.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\bin\Debug\log4net.xml
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\obj\Debug\LogSpace.csprojAssemblyReference.cache
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\obj\Debug\LogSpace.csproj.CoreCompileInputs.cache
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\obj\Debug\LogSpace.csproj.CopyComplete
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\obj\Debug\LogSpace.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\LogSpace\obj\Debug\LogSpace.pdb

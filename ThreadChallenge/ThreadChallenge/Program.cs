@@ -6,7 +6,8 @@ using System.Text;
 using PersonRecord;
 using System.Threading.Tasks;
 using LumenWorks.Framework.IO.Csv;
-using log4net;
+using System.Reflection;
+using LogSpace;
 
 namespace ThreadChallenge
 {
@@ -14,8 +15,13 @@ namespace ThreadChallenge
     {
         static void Main(string[] args)
         {
-            List<RecordInformation> miLista = ReadInformation.DeserializeCsv("ThreadData.csv");
-            WriteTextFile.Write(miLista);
+            LogManager.LogThis("bienvenidos","");
+
+            //List<RecordInformation> miLista = ReadInformation.DeserializeCsv("ThreadData.csv");
+            //WriteTextFile.Write(miLista);
+
+
+            
 
             
         }

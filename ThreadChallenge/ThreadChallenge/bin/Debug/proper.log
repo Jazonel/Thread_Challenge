@@ -1,0 +1,5 @@
+2019-03-07 08:19:04,505 [1] INFO  ThreadChallenge.Program Hello, user
+2019-03-07 08:19:32,544 [1] INFO  ThreadChallenge.Program Hello, user
+2019-03-07 08:24:18,432 [1] ERROR ThreadChallenge.Program Hello, user
+2019-03-07 08:49:42,174 [1] INFO  ThreadChallenge.Program Buenas tardes
+2019-03-07 09:09:05,646 [1] INFO  LogSpace.LogManager bienvenidos

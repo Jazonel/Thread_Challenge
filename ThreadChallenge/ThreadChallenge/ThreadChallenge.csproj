@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LogSpace\LogSpace.csproj">
+      <Project>{cc17e09d-ca7d-46fc-af85-ff655ab333b0}</Project>
+      <Name>LogSpace</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PersonRecord\PersonRecord.csproj">
       <Project>{9f791ed4-ae10-4edc-aa41-8a2ecb7d41ae}</Project>
       <Name>PersonRecord</Name>

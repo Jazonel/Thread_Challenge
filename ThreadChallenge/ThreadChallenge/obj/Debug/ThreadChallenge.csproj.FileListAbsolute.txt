@@ -24,3 +24,7 @@ C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\o
 C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.csproj.CopyComplete
 C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.exe
 C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\obj\Debug\ThreadChallenge.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\log4net.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\log4net.xml
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LogSpace.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LogSpace.pdb
