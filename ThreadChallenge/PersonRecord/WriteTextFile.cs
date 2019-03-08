@@ -10,11 +10,16 @@ namespace PersonRecord
     public class WriteTextFile
     {
 
-        public static void Write(Person record)
+        public static void Write(Person record, string error)
         {
-            
-            File.WriteAllText(PutInOneLine(record)[0], PutInOneLine(record)[1]);
-            
+            if (error != "No")
+            {
+                File.WriteAllText(PutInOneLine(record)[0], PutInOneLine(record)[1]);
+            }
+            else
+            {
+                ErrorWriting();
+            }
         }
 
 
@@ -50,6 +55,10 @@ namespace PersonRecord
             toWrite[1] = information;
             return toWrite;
         }
-        
+
+        private static void ErrorWriting()
+        {
+            Console.WriteLine("No se pudo hacer el registro");
+        }
     }
 }

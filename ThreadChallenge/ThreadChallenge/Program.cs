@@ -18,24 +18,15 @@ namespace ThreadChallenge
         static void Main(string[] args)
         {
 
+            Tuple <CsvReader, Dictionary<string, int>> csvInformation = ReadInformation.DeserializeCsv("ThreadData.csv");
 
-
-            ProcessPerson.test();
-
-
-
-                //LogManager.LogThis("bienvenidos","");
-
-                //Tuple <CsvReader, Dictionary<string, int>> csvInformation = ReadInformation.DeserializeCsv("ThreadData.csv");
-                //while (csvInformation.Item1.ReadNextRecord())
-                //{
-
-                //    Console.WriteLine(csvInformation.Item1[0]);
-                //}
-                //long temporal = csvInformation.Item1.CurrentRecordIndex;
-                //WriteTextFile.Write(miLista);
-
-                Console.ReadLine();
+            foreach(string[] test in csvInformation.Item1)
+            {
+                 ProcessPerson.Process(test);           
+            }
+            //long temporal = csvInformation.Item1.CurrentRecordIndex;
+            //WriteTextFile.Write(miLista);
+            Console.ReadLine();
 
 
 

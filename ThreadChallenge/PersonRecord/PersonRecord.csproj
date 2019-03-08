@@ -74,6 +74,7 @@
     <Compile Include="ProcessPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadInformation.cs" />
+    <Compile Include="WriteInDB.cs" />
     <Compile Include="WriteTextFile.cs" />
   </ItemGroup>
   <ItemGroup>
