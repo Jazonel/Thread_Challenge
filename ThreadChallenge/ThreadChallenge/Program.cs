@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using LumenWorks.Framework.IO.Csv;
 using System.Reflection;
 using LogSpace;
+using System.Data.Common;
+using System.Configuration;
 
 namespace ThreadChallenge
 {
@@ -15,15 +17,28 @@ namespace ThreadChallenge
     {
         static void Main(string[] args)
         {
-            LogManager.LogThis("bienvenidos","");
-
-            //List<RecordInformation> miLista = ReadInformation.DeserializeCsv("ThreadData.csv");
-            //WriteTextFile.Write(miLista);
 
 
-            
 
-            
+            ProcessPerson.test();
+
+
+
+                //LogManager.LogThis("bienvenidos","");
+
+                //Tuple <CsvReader, Dictionary<string, int>> csvInformation = ReadInformation.DeserializeCsv("ThreadData.csv");
+                //while (csvInformation.Item1.ReadNextRecord())
+                //{
+
+                //    Console.WriteLine(csvInformation.Item1[0]);
+                //}
+                //long temporal = csvInformation.Item1.CurrentRecordIndex;
+                //WriteTextFile.Write(miLista);
+
+                Console.ReadLine();
+
+
+
         }
     }
 }

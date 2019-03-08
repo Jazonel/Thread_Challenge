@@ -28,3 +28,8 @@ C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\b
 C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\log4net.xml
 C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LogSpace.dll
 C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\LogSpace.pdb
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\EntityFramework.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\PersonRecord.dll.config
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\EntityFramework.xml
+C:\Users\ybernal\source\repos\Thread_Challenge\ThreadChallenge\ThreadChallenge\bin\Debug\EntityFramework.SqlServer.xml

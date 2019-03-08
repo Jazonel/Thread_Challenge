@@ -16,7 +16,11 @@ namespace LogSpace
         {
             XmlConfigurator.Configure();
 
-            _log.Info(message);
+            if (typeOfLog == "Error")
+            {
+                _log.Error(message);
+            }
+            
 
             Console.WriteLine(message);
             Console.ReadLine();

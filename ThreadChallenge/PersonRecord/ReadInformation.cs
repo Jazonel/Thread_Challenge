@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LogSpace;
 using LumenWorks.Framework.IO.Csv;
 using System.IO;
 
@@ -11,13 +12,13 @@ namespace PersonRecord
     public class ReadInformation
     {
         private static Dictionary<string, int> csvMap = new Dictionary<string, int>();
-        public static List<RecordInformation> recordList = new List<RecordInformation>();
 
 
-        public static List<RecordInformation> DeserializeCsv(string path)
+        public static Tuple<CsvReader, Dictionary<string, int>> DeserializeCsv(string path)
         {
-            using (CsvReader csvFile = new CsvReader(new StreamReader(path), true))
-            {
+            Tuple<CsvReader, Dictionary<string, int>> csvInformation;
+            CsvReader csvFile = new CsvReader(new StreamReader(path), true);
+            
                 int fieldCount = csvFile.FieldCount;
                 string[] headers = csvFile.GetFieldHeaders();
 
@@ -25,7 +26,10 @@ namespace PersonRecord
                 {
                     csvMap[headers[i]] = i;
                 }
+                
 
+                return csvInformation = new Tuple<CsvReader, Dictionary<string, int>>(csvFile, csvMap);
+                /*
                 while (csvFile.ReadNextRecord())
                 {
                     RecordInformation recordObject = new RecordInformation();
@@ -48,22 +52,58 @@ namespace PersonRecord
                     recordObject.occupation = csvFile[csvMap["Occupation"]];
                     recordObject.gender = csvFile[csvMap["Gender"]];
                     recordObject.maritalStatus = csvFile[csvMap["MaritalStatus"]];
-                    recordObject.homeOwnerFlag = Int32.Parse(csvFile[csvMap["HomeOwnerFlag"]]);
-                    recordObject.numberCarsOwned = Int32.Parse(csvFile[csvMap["NumberCarsOwned"]]);
-                    recordObject.numberChildrenAtHome = Int32.Parse(csvFile[csvMap["NumberChildrenAtHome"]]);
-                    recordObject.totalChildren = Int32.Parse(csvFile[csvMap["TotalChildren"]]);
+                    if (int.TryParse(csvFile[csvMap["HomeOwnerFlag"]], out int flag))
+                    {
+                        recordObject.homeOwnerFlag = flag;
+                    }
+                    else
+                    {
+
+                        continue;
+                    }
+
+                    if (int.TryParse(csvFile[csvMap["NumberCarsOwned"]], out int cars))
+                    {
+                        recordObject.numberCarsOwned = cars;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+
+                    if (int.TryParse(csvFile[csvMap["NumberChildrenAtHome"]], out int childrenHome))
+                    {
+                        recordObject.numberChildrenAtHome = childrenHome;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+
+                    if (int.TryParse(csvFile[csvMap["TotalChildren"]], out int children))
+                    {
+                        recordObject.totalChildren = children;
+                    }
+                    else {
+                        continue;
+                    }
+
                     if (int.TryParse(csvFile[csvMap["YearlyIncome"]], out int income))
                     {
                         recordObject.yearlyIncome = income;
                     }
                     else {
+                        LogManager.LogThis("La persona con id " + recordObject.id + " no pudo ser agregada", "Error");
                         continue;
                     }
-                    recordList.Add(recordObject);
-                }
+                    */
 
-            }
-            return recordList;
+                //WriteTextFile.Write(recordObject);
+                //recordList.Add(recordObject);
+            
+
+            
+
         }
 
 

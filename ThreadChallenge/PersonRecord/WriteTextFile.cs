@@ -10,42 +10,41 @@ namespace PersonRecord
     public class WriteTextFile
     {
 
-        public static void Write(List<RecordInformation> records)
+        public static void Write(Person record)
         {
-            foreach(RecordInformation record in records)
-            {
-               File.WriteAllText(PutInOneLine(record)[0], PutInOneLine(record)[1]);
-            }
+            
+            File.WriteAllText(PutInOneLine(record)[0], PutInOneLine(record)[1]);
+            
         }
 
 
-        private static string[] PutInOneLine(RecordInformation records)
+        private static string[] PutInOneLine(Person records)
         {
             string[] toWrite = new string[2];
-            string name = records.id + ".txt";
+            string name = records.Id + ".txt";
             string path = @"C:\Person\" + name;
-            string information = "Id:" + records.id + "\n" +
-                                 "Title:" + records.title + "\n" +
-                                 "First Name:" + records.firstName + "\n" +
-                                 "Middle Name:" + records.middleName + "\n" +
-                                 "Suffix:" + records.suffix + "\n" +
-                                 "Address Line1:" + records.addressLine1 + "\n" +
-                                 "Address Line2:" + records.addressLine2 + "\n" +
-                                 "City:" + records.city + "\n" +
-                                 "State Province Name:" + records.stateProvinceName + "\n" +
-                                 "Country Region Name:" + records.countryRegionName + "\n" +
-                                 "Postal Code:" + records.postalCode + "\n" +
-                                 "Phone Number:" + records.phoneNumber + "\n" +
-                                 "Birth Date:" + Convert.ToString(records.birthDate) + "\n" +
-                                 "Education:" + records.education + "\n" +
-                                 "Occupation:" + records.occupation + "\n" +
-                                 "Gender:" + records.gender + "\n" +
-                                 "Maritial Status:" + records.maritalStatus + "\n" +
-                                 "Home Owner Flag:" + records.homeOwnerFlag.ToString() + "\n" +
-                                 "Number Cars Owned:" + records.numberCarsOwned.ToString() + "\n" +
-                                 "Number Children At Home:" + records.numberChildrenAtHome.ToString() + "\n" +
-                                 "Total CHildren:" + records.totalChildren.ToString() + "\n" +
-                                 "Yearly Income:" + records.yearlyIncome.ToString();
+            string information = "Id:" + records.Id + "\n" +
+                                 "Title:" + records.Title + "\n" +
+                                 "First Name:" + records.FirstName + "\n" +
+                                 "Middle Name:" + records.MiddleName + "\n" +
+                                 "Suffix:" + records.Suffix + "\n" +
+                                 "Address Line1:" + records.AddressLine1 + "\n" +
+                                 "Address Line2:" + records.AddressLine2 + "\n" +
+                                 "City:" + records.City + "\n" +
+                                 "State Province Name:" + records.StateProvinceName + "\n" +
+                                 "Country Region Name:" + records.CountryRegionName + "\n" +
+                                 "Postal Code:" + records.PostalCode + "\n" +
+                                 "Phone Number:" + records.PhoneNumber + "\n" +
+                                 "Birth Date:" + Convert.ToString(records.BirthDate) + "\n" +
+                                 "Education:" + records.Education + "\n" +
+                                 "Occupation:" + records.Occupation + "\n" +
+                                 "Gender:" + records.Gender + "\n" +
+                                 "Maritial Status:" + records.MaritialStatus + "\n" +
+                                 "Home Owner Flag:" + records.HomeOwnerFlag.ToString() + "\n" +
+                                 "Number Cars Owned:" + records.NumberCarsOwned.ToString() + "\n" +
+                                 "Number Children At Home:" + records.NumberChildrenAtHome.ToString() + "\n" +
+                                 "Total CHildren:" + records.TotalChildren.ToString() + "\n" +
+                                 "Yearly Income:" + records.YearlyIncome.ToString();
 
             toWrite[0] = path;
             toWrite[1] = information;
