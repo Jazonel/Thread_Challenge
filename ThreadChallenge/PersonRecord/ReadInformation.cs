@@ -11,24 +11,11 @@ namespace PersonRecord
 {
     public class ReadInformation
     {
-        private static Dictionary<string, int> csvMap = new Dictionary<string, int>();
+       
 
-
-        public static Tuple<CsvReader, Dictionary<string, int>> DeserializeCsv(string path)
-        {
-            Tuple<CsvReader, Dictionary<string, int>> csvInformation;
-            CsvReader csvFile = new CsvReader(new StreamReader(path), true);
-            
-                int fieldCount = csvFile.FieldCount;
-                string[] headers = csvFile.GetFieldHeaders();
-
-                for (int i = 0; i < fieldCount; i++)
-                {
-                    csvMap[headers[i]] = i;
-                }               
-
-                return csvInformation = new Tuple<CsvReader, Dictionary<string, int>>(csvFile, csvMap);         
-
+        public static CsvReader ReadCsv(string path)
+        {        
+            return new CsvReader(new StreamReader(path), true);
         }
 
 

@@ -10,20 +10,22 @@ namespace LogSpace
     
     public class LogManager
     {
-        private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public readonly log4net.ILog _log;
 
-        public static void LogThis(string message, string typeOfLog)
+        public void LogThis(string message, string typeOfLog)
         {
             XmlConfigurator.Configure();
-
             if (typeOfLog == "Error")
             {
                 _log.Error(message);
+                Console.WriteLine(message);
             }
-            
-
-            Console.WriteLine(message);
-            Console.ReadLine();
         }
+
+        public LogManager()
+        {
+            _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        }
+            
     }
 }

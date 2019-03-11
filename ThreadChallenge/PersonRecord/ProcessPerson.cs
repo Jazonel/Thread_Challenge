@@ -6,39 +6,24 @@ using System.Threading.Tasks;
 using LogSpace;
 using LumenWorks.Framework.IO.Csv;
 
-
 namespace PersonRecord
 {
     public class ProcessPerson
     {
-        //public static void test() {
 
-        //    using (PersonDBEntities context = new PersonDBEntities())
-        //    {
-        //        Person person = new Person
-        //        {
-        //            Id = 6546,
-        //            BirthDate = DateTime.Now,
-        //            HomeOwnerFlag = 1,
-        //            NumberCarsOwned = 1,
-        //            NumberChildrenAtHome =0,
-        //            TotalChildren = 5,
-        //            YearlyIncome = 8
-                   
-        //        };
-
-        //        context.Persons.Add(person);
-        //        context.SaveChanges();
-        //    }
-
-        //}
-
-        public static void Process(string[] record)
+        public static void Process(string[] record, Options options)
         {
 
             string error = "";
             Person person = new Person();
-            person.Id = int.Parse(record[0]);
+
+            if (int.TryParse(record[0], out int id))
+            {
+                person.Id = id;
+            }
+            else {
+                error = "Error";
+            }
             person.Title = record[1];
             person.FirstName = record[2];
             person.MiddleName = record[3];
@@ -51,7 +36,13 @@ namespace PersonRecord
             person.CountryRegionName = record[10];
             person.PostalCode = record[11];
             person.PhoneNumber = record[12];
-            person.BirthDate = Convert.ToDateTime(record[13]);
+            if (DateTime.TryParse(record[13], out DateTime date))
+            {
+                person.BirthDate = date;
+            }
+            else {
+                error = "Error";
+            }
             person.Education = record[14];
             person.Occupation = record[15];
             person.Gender = record[16];
@@ -63,7 +54,7 @@ namespace PersonRecord
             else
             {
 
-                error = "No";
+                error = "Error";
             }
 
             if (int.TryParse(record[19], out int cars))
@@ -72,7 +63,7 @@ namespace PersonRecord
             }
             else
             {
-                error = "No";
+                error = "Error";
             }
 
             if (int.TryParse(record[20], out int childrenHome))
@@ -81,7 +72,7 @@ namespace PersonRecord
             }
             else
             {
-                error = "No";
+                error = "Error";
             }
 
             if (int.TryParse(record[21], out int children))
@@ -90,7 +81,7 @@ namespace PersonRecord
             }
             else
             {
-                error = "No";
+                error = "Error";
             }
 
             if (int.TryParse(record[22], out int income))
@@ -99,12 +90,13 @@ namespace PersonRecord
             }
             else
             {
-                error = "No";
+                error = "Error";
                 //LogManager.LogThis("La persona con id " + person.Id + " no pudo ser agregada", "Error");
                 //continue;
             }
 
             WriteTextFile.Write(person, error);
+            
 
         }
     }

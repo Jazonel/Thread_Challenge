@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using LogSpace;
 
 namespace PersonRecord
 {
@@ -12,17 +13,17 @@ namespace PersonRecord
 
         public static void Write(Person record, string error)
         {
-            if (error != "No")
+            LogManager log = new LogManager();
+            if (error != "Error")
             {
                 File.WriteAllText(PutInOneLine(record)[0], PutInOneLine(record)[1]);
+                //WriteInDB.WriteNewRecordDB(record);
             }
             else
             {
-                ErrorWriting();
+                log.LogThis("La persona con id " + record.Id + " no pudo ser agregada", "Error");
             }
         }
-
-
         private static string[] PutInOneLine(Person records)
         {
             string[] toWrite = new string[2];
@@ -56,9 +57,5 @@ namespace PersonRecord
             return toWrite;
         }
 
-        private static void ErrorWriting()
-        {
-            Console.WriteLine("No se pudo hacer el registro");
-        }
     }
 }

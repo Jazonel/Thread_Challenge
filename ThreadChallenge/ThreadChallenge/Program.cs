@@ -11,6 +11,7 @@ using LogSpace;
 using System.Data.Common;
 using System.Configuration;
 
+
 namespace ThreadChallenge
 {
     class Program
@@ -18,15 +19,20 @@ namespace ThreadChallenge
         static void Main(string[] args)
         {
 
-            Tuple <CsvReader, Dictionary<string, int>> csvInformation = ReadInformation.DeserializeCsv("ThreadData.csv");
+            CsvReader csvInformation = ReadInformation.ReadCsv("ThreadData.csv");
 
-            foreach(string[] test in csvInformation.Item1)
-            {
-                 ProcessPerson.Process(test);           
-            }
+            Options options = Interfaz.OpcionesDeInterfaz();
+
+
+            Parallel.ForEach<string[]>(csvInformation, person => { ProcessPerson.Process(person, options); });
+            
+
+
             //long temporal = csvInformation.Item1.CurrentRecordIndex;
             //WriteTextFile.Write(miLista);
-            Console.ReadLine();
+
+
+            //Console.ReadLine();
 
 
 

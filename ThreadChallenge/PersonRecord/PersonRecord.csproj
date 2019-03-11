@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaz.cs" />
+    <Compile Include="Options.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>PersonMap.tt</DependentUpon>
     </Compile>

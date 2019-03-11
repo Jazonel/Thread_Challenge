@@ -6,12 +6,12 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="50" />
-    <Property Name="FirstName" Type="nchar" MaxLength="50" />
-    <Property Name="MiddleName" Type="nvarchar" MaxLength="10" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-    <Property Name="Suffix" Type="nvarchar" MaxLength="10" />
+    <Property Name="Suffix" Type="nvarchar" MaxLength="50" />
     <Property Name="AddressLine1" Type="nvarchar" MaxLength="50" />
-    <Property Name="AddressLine2" Type="nvarchar" MaxLength="10" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="50" />
     <Property Name="City" Type="nvarchar" MaxLength="50" />
     <Property Name="StateProvinceName" Type="nvarchar" MaxLength="50" />
     <Property Name="CountryRegionName" Type="nvarchar" MaxLength="50" />
@@ -20,8 +20,8 @@
     <Property Name="BirthDate" Type="datetime" Nullable="false" />
     <Property Name="Education" Type="nvarchar" MaxLength="50" />
     <Property Name="Occupation" Type="nvarchar" MaxLength="50" />
-    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
-    <Property Name="MaritialStatus" Type="nvarchar" MaxLength="10" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritialStatus" Type="nvarchar" MaxLength="50" />
     <Property Name="HomeOwnerFlag" Type="int" Nullable="false" />
     <Property Name="NumberCarsOwned" Type="int" Nullable="false" />
     <Property Name="NumberChildrenAtHome" Type="int" Nullable="false" />
