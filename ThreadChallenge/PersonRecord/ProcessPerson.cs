@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using LogSpace;
 using LumenWorks.Framework.IO.Csv;
@@ -10,7 +11,11 @@ namespace PersonRecord
 {
     public class ProcessPerson
     {
-
+        /// <summary>
+        /// Proces the CSV information, introducing it into an object. Person
+        /// </summary>
+        /// <param name="record">Array of strings that contains all the record information</param>
+        /// <param name="options">Object that will allow or prevent functionalities</param>
         public static void Process(string[] record, Options options)
         {
 
@@ -91,11 +96,45 @@ namespace PersonRecord
             else
             {
                 error = "Error";
-                //LogManager.LogThis("La persona con id " + person.Id + " no pudo ser agregada", "Error");
-                //continue;
+
             }
 
-            WriteTextFile.Write(person, error);
+
+            LogManager log = new LogManager();
+
+            if (error != "Error")
+            {
+                if (options.printOnConsole)
+                {
+                    Thread printIdAge = new Thread(PrintOnConsole.PrintIdAge);
+                    printIdAge.Start(person);
+                    if (options.ShowActualStatus)
+                    {
+                        log.LogThis("The person with id " + person.Id + " was print on console successfully.", "Info");
+                    }
+                }
+                if (options.WriteTxtFile)
+                {
+                    Thread writeTxt = new Thread(WriteTextFile.Write);
+                    writeTxt.Start(person);
+                    if (options.ShowActualStatus)
+                    {
+                        log.LogThis("The txt of the person with id " + person.Id + " was written successfully", "Info");
+                    }
+                }
+                if (options.WriteInDB)
+                {
+                    Thread writeDB = new Thread(WriteInDB.WriteNewRecordDB);
+                    writeDB.Start(person);
+                    if (options.ShowActualStatus)
+                    {
+                        log.LogThis("The person with id " + person.Id + " was insert on the data base successfully", "Info");
+                    }
+                }
+            }
+            else {
+                log.LogThis("The person with id " + person.Id + " could not been procceded due to a missing file", "Error");
+            }
             
 
         }

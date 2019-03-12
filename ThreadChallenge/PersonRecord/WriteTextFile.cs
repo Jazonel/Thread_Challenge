@@ -10,20 +10,21 @@ namespace PersonRecord
 {
     public class WriteTextFile
     {
-
-        public static void Write(Person record, string error)
-        {
-            LogManager log = new LogManager();
-            if (error != "Error")
-            {
-                File.WriteAllText(PutInOneLine(record)[0], PutInOneLine(record)[1]);
-                //WriteInDB.WriteNewRecordDB(record);
-            }
-            else
-            {
-                log.LogThis("La persona con id " + record.Id + " no pudo ser agregada", "Error");
-            }
+        /// <summary>
+        /// Writes a txt in wich will be all the record information. The name will be the id of the current record
+        /// </summary>
+        /// <param name="record">Record information that will be written in the txt</param>
+        public static void Write(object record)
+        { 
+            File.WriteAllText(PutInOneLine((Person)record)[0], PutInOneLine((Person)record)[1]);          
+                   
         }
+
+        /// <summary>
+        /// takes the record information and concatenate all in one string
+        /// </summary>
+        /// <param name="records">Information to concatenate</param>
+        /// <returns></returns>
         private static string[] PutInOneLine(Person records)
         {
             string[] toWrite = new string[2];

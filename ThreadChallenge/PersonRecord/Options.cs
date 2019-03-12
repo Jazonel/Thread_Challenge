@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PersonRecord
 {
+    /// <summary>
+    /// Class that contains the options that will be executed for the application
+    /// </summary>
     public class Options
     {
         public bool printOnConsole;
@@ -13,6 +16,7 @@ namespace PersonRecord
         public bool WriteInDB;
         public bool ShowActualStatus;
 
+        
         public Options(bool _printOnConsole, bool _WriteTxtFile, bool _WriteInDB, bool _ShowActualStatus)
         {
             printOnConsole = _printOnConsole;

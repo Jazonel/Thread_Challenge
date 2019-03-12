@@ -8,7 +8,10 @@ namespace PersonRecord
 {
     public class Interfaz
     {
-        
+        /// <summary>
+        /// Write in console all the options for the execution of the application
+        /// </summary>
+        /// <returns></returns>
         public static Options OpcionesDeInterfaz()
         {
 
@@ -20,7 +23,7 @@ namespace PersonRecord
 
             Console.WriteLine("The program will read a CSV file, an it will fill a Data base using all the registers found in the file");
             Console.WriteLine();
-            Console.WriteLine("Configure the next oprions with (Yes/No) as you wish. Answer as shown next(Y/N)");
+            Console.WriteLine("Configure the next oprions with (Yes/No) as you wish. Answer as shown next(y/n)");
             Console.WriteLine();
             Console.Write("Do you want the application to print id and age of each person? ");
             temporal = Console.ReadLine();

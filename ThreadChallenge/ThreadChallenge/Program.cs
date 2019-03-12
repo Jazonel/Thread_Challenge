@@ -17,25 +17,14 @@ namespace ThreadChallenge
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
 
             CsvReader csvInformation = ReadInformation.ReadCsv("ThreadData.csv");
 
             Options options = Interfaz.OpcionesDeInterfaz();
 
-
-            Parallel.ForEach<string[]>(csvInformation, person => { ProcessPerson.Process(person, options); });
+            Parallel.ForEach<string[]>(csvInformation, new ParallelOptions { MaxDegreeOfParallelism = 4}, person => { ProcessPerson.Process(person, options); });
             
-
-
-            //long temporal = csvInformation.Item1.CurrentRecordIndex;
-            //WriteTextFile.Write(miLista);
-
-
-            //Console.ReadLine();
-
-
-
         }
     }
 }

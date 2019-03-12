@@ -18,13 +18,26 @@ namespace LogSpace
             if (typeOfLog == "Error")
             {
                 _log.Error(message);
-                Console.WriteLine(message);
+
+            }
+            if (typeOfLog == "Info")
+            {
+                _log.Info(message);
+            }
+            if (typeOfLog == "Warning")
+            {
+                _log.Warn(message);
             }
         }
 
         public LogManager()
         {
             _log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        }
+
+        ~LogManager()
+        {
+
         }
             
     }
